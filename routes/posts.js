@@ -37,16 +37,16 @@ router.get("/:postId", async (req, res) => {
   }
 });
 
-// DELETE A SPECIFIC POST
+DELETE A SPECIFIC POST
 
-// router.delete("/:postId", async (req, res) => {
-//   try {
-//     const removedPost = await Post.remove({ _id: req.params.postId });
-//     res.json(removedPost);
-//   } catch (err) {
-//     res.json({ message: err });
-//   }
-// });
+router.delete("/:postId", async (req, res) => {
+  try {
+    const removedPost = await Post.remove({ _id: req.params.postId });
+    res.json(removedPost);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
 
 // UPDATE A POST
 
